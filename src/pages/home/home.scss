@@ -1,0 +1,14 @@
+page-home {
+	ion-header {
+		text-align: center;
+	}
+	ion-content.invalid-color {
+	  background: red;
+	}
+	ion-footer {
+		text-align: center;
+	}
+	ion-card {
+		padding: 20px;
+	}
+}
