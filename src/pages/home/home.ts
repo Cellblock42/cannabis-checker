@@ -9,8 +9,8 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 export class HomePage {
   qrData = null;
   scannedCode = "O.G. Kush";
-  validCode = true;
-  invalidCode = false;
+  validCode = false;
+  invalidCode = true;
  
   constructor(private barcodeScanner: BarcodeScanner) { }
  
@@ -22,7 +22,7 @@ export class HomePage {
     		this.invalidCode = null;
     	} else {
 	      this.scannedCode = barcodeData.text;
-	      if (this.scannedCode == "O.G. Kush") {
+	      if (this.scannedCode == "782458") {
 	      	this.validCode = true;
 	      	this.invalidCode = false;
 	      } else {

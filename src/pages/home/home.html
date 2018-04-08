@@ -1,55 +1,47 @@
 <ion-header>
   	<ion-navbar>
   		<ion-buttons *ngIf="scannedCode" left>
-	  		<button ion-button color="primary" [solid]=true (click)="reset()">
+	  		<button ion-button color="secondary" [solid]=true (click)="reset()">
 	  			<ion-icon name="arrow-back"></ion-icon>&nbsp;Back
 	  		</button>
 	  	</ion-buttons>
 	    <ion-title>
+	    	<div class="biggerText">
 	      Cannabis <img id="logo" src="assets/imgs/weedchain_logo_small.png"/> Checker
+	    	</div>
 	    </ion-title>
   	</ion-navbar>
 </ion-header>
  
 <ion-content padding>
-	<ion-card *ngIf="!scannedCode">
+	<ion-card *ngIf="!scannedCode" class="biggerText">
 		Use this app to scan any cannabis products you buy. This way you are certain that the stuff is legal, safe, and of high quality.
 	</ion-card>
   <ion-card *ngIf="validCode">
-  	<div class="row">
-        <div class="col" style="float:right">
-					<img src="assets/imgs/check.png" style="float:right; width:50px"/>
-        </div>
-        <div class="col">
-        	<br>
-          <p><b>This stuff is OK!</b></p>
-        </div>
-    </div>
-    <ion-card-content>
+    <ion-card-content class="biggerText">
+    	<div class="checkResult">
+			<img src="assets/imgs/check.png" class="checkImage checkResult"/>
+	    This stuff is OK!<br>
+	  	</div>
+    	<img src="assets/imgs/jongsma.jpg"/>
     	<b>Grower:</b><br> Farmer Siemen Jongsma and his father have a long history in organic farming.<br>
 			<b>Growertype: </b><br> Frysian Organic Nederwiet<br>
 			<b>Cannabis type:</b><br>  Indica Cannabis 7% THC<br>
-			<b>Harvest date:</b><br> 01-04-2018<br>
+			<b>Harvest date:</b><br> 07-04-2018<br>
 			<b>Coffeeshop: </b><br> Toker Joker<br>
 			<b>Sell date:</b><br>  08-04-2018<br>
-    	<img src="assets/imgs/jongsma.jpg"/>
     </ion-card-content>
   </ion-card>
-  <ion-card *ngIf="invalidCode">
-    <div class="row">
-        <div class="col" style="float:right">
-					<img src="assets/imgs/wrong.png" style="float:right; width:50px"/>
+  <ion-card *ngIf="invalidCode" class="biggerText">
+  	    <div class="checkResult">
+					<img src="assets/imgs/fail.jpeg" class="checkImage checkResult"/>
+          This stuff is NOT OK!
         </div>
-        <div class="col">
-        	<br>
-          <p><b>This stuff is NOT OK!</b></p>
-        </div>
-    </div>
   </ion-card>
 </ion-content>
 <ion-footer>
 	<ion-toolbar>
-		<button ion-button round icon-left (click)="scanCode()" color="secondary" id="scan-button"><ion-icon name="qr-scanner"></ion-icon>Scan Code
+		<button ion-button round icon-left (click)="scanCode()" color="secondary" id="scan-button" class="biggerText"><ion-icon name="qr-scanner"></ion-icon>Scan Code
 		</button>
 	</ion-toolbar>
 </ion-footer>
