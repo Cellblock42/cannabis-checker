@@ -21,6 +21,7 @@
     <ion-card-content class="biggerText">
     	<div class="checkResult">
 			<img src="assets/imgs/check.png" class="checkImage checkResult"/>
+			Scanned code: {{scannedCode}}<br>
 	    This stuff is OK!<br>
 	  	</div>
     	<img src="assets/imgs/jongsma.jpg"/>
@@ -35,6 +36,7 @@
   <ion-card *ngIf="invalidCode" class="biggerText">
   	    <div class="checkResult">
 					<img src="assets/imgs/fail.jpeg" class="checkImage checkResult"/>
+					Scanned code: {{scannedCode}}<br>
           This stuff is NOT OK!
         </div>
   </ion-card>

@@ -8,9 +8,9 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 })
 export class HomePage {
   qrData = null;
-  scannedCode = "O.G. Kush";
+  scannedCode = null;
   validCode = false;
-  invalidCode = true;
+  invalidCode = false;
  
   constructor(private barcodeScanner: BarcodeScanner) { }
  
